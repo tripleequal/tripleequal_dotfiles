@@ -85,12 +85,15 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Aliases
 alias zeus='sbt'
 alias zeusdebug='sbt -jvm-debug 9999'
 alias ls='ls -lAFh'
+alias cat='bat --paging=never'
+alias man='batman'
+alias rbz='source ~/.zshrc'
 
 # Functions
 function mkcd() {
@@ -98,6 +101,10 @@ function mkcd() {
 }
 
 # Path Variables
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Bat Syntax Highlight for Man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
