@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc:
+    ~/.gitconfig:
+
+# - create:
+#     - ~/downloads
+#     - ~/.vim/undo-history
+
+
+# - shell:
+#   - chsh -s $(which zsh)
+#   - [chsh -s $(which zsh), Making zsh the default shell]
+#   -
+#     command: read var && echo Your variable is $var
+#     stdin: true
+#     stdout: true
+#     description: Reading and printing variable
+#     quiet: true
+#   -
+#     command: read fail
+#     stderr: true
+- shell:
+  - chsh -s $(which zsh)
+  - [chsh -s $(which zsh)
+  # - [git submodule update --init --recursive, Installing submodules]

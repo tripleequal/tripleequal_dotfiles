@@ -1,0 +1,15 @@
+[user]
+	email = 18107428+tripleequal@users.noreply.github.com
+	name = Bob Hanson
+	signingKey = ""
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
