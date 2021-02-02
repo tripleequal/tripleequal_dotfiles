@@ -10,6 +10,7 @@ tap "sambadevi/powerlevel9k"
 brew "git"
 brew "bat"
 brew "exa"
+brew "mas"
 brew "python@3.9"
 brew "httpie"
 brew "newman"
@@ -30,3 +31,7 @@ cask "brave-browser"
 cask "dissenter-browser"
 cask "gitkraken"
 cask "slack"
+
+mas "Snappy", id: 512617038
+mas "CleanMyMac X", id: 1339170533
+mas "1Password 7", id: 1333542190
