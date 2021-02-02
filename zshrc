@@ -90,10 +90,11 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias zeus='sbt'
 alias zeusdebug='sbt -jvm-debug 9999'
-alias ls='ls -lAFh'
+alias ls='exa -laFH --git'
+alias exa='exa -laFH --git'
 alias cat='bat --paging=never'
 alias man='batman'
-alias rbz='source ~/.zshrc'
+alias rld='source ~/.zshrc'
 
 # Functions
 function mkcd() {
@@ -104,6 +105,7 @@ function mkcd() {
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Bat Syntax Highlight for Man pages
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export HOMEBREW_CASK_OPTIONS="--no-quarantine"
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
